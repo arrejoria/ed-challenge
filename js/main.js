@@ -1,19 +1,23 @@
 /************************************
  * Author: Lucas Exequiel Arrejoria *
  ***********************************/
+ const cta = document.querySelector('.cta_container'),
+       modal = document.querySelector('.modal');
 
+ const buttons = {
+    open: document.querySelector('#openBtn'),
+    close: document.querySelector('#closeBtn')
+}
 
-const showModal = document.querySelector('#openBtn');
- const closeModal = document.querySelector('#closeBtn');
- const cta = document.querySelector('.cta_container');
- const modal = document.querySelector('.modal');
-
- showModal.addEventListener('click', (e) => {
+ const {open, close} = buttons;
+ 
+ open.addEventListener('click', (e) => {
      e.preventDefault();
          cta.classList.replace('active', 'hide');
          modal.classList.replace('hide', 'active');  
  })
- closeModal.addEventListener('click', (e) => {
+ 
+ close.addEventListener('click', (e) => {
      e.preventDefault();
          modal.classList.replace('active', 'hide');
          cta.classList.replace('hide', 'active');  
