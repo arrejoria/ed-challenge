@@ -1,0 +1,252 @@
+/************************************
+ * Author: Lucas Exequiel Arrejoria *
+ ***********************************/
+
+/****
+ * Importaciones:
+    -Google Fonts *
+ ****/
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;700&display=swap');
+/*Variables:
+*/
+
+:root {
+    /* Contenedor */
+    --desktop-width: 1440px;
+    --desktop-height: 1440px;
+
+    /* Colors: */
+    --background-color: #FFFFFF;
+    --primary-text-color: #162E5A;
+    --secondary-text-color: #0064A8;
+    --links-color: #10CCEC;
+    --button-color: #F8CE75;
+
+    /*Fonts */
+    --primary-font: 'Poppins';
+    --secondary-font: 'Open Sans';
+    /******************************
+     *_______Fonts details________*
+     * Poppins, Bold - 56px       *
+     * Poppins, Regular - 56px    *
+     * Open Sans, Regular - 14px  *
+     * Open Sans, Bold - 32px     *
+     * Open Sans, Bold - 16px     *
+     * Open Sans, Regular - 14px  *
+     * Open Sans, Semibold - 12px *
+     * Open Sans, Semibold - 20px *
+     ******************************/
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.fig_container {
+    padding: 0!important;
+    height: 480px;
+
+}
+
+.fig_content {
+    position: relative;
+}
+
+.fig_content figcaption {
+    position: absolute;
+    bottom: 40px;
+    left: 138px;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+}
+
+.fig_content figcaption h1 {
+    font: normal normal bold 56px/85px var(--primary-font);
+    color: #FFF;
+    font-weight: 800;
+}
+
+.fig_content figcaption h1 span {
+    font-weight: 400;
+}
+
+@media (max-width: 740px) {
+
+    .fig_content img{
+        width: auto;
+    }
+
+    .fig_content figcaption {
+        left: 20px;
+        bottom: 40px;
+    }
+    .fig_content figcaption h1{
+        font-size: 48px;
+    }
+}
+
+
+/****
+ * Blog section *
+ ****/
+
+.blog_container {
+    padding: 0 90px;
+}
+
+
+.blog_post {
+    width: 336px;
+    box-sizing: border-box;
+}
+
+.blog_post img {
+    display: block;
+    width: 100%;
+}
+
+.blog_post-info {
+    border-width: 0 1px 1px 1px;
+    border-color: #000;
+    border-style: solid;
+    height: auto;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    padding: 24px 33px 26px 23px;
+    text-align: start;
+
+}
+
+.blog_post-info a {
+    color: var(--links-color);
+    font-size: 14px;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    margin-bottom: 13px;
+
+}
+
+.blog_post-info a:nth-child(3) {
+    color: var(--links-color);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+}
+
+.blog_post-info p {
+    font-size: 20px;
+    padding: 13px 0 45px;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .blog_container{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+}
+
+/****
+ * CTA SECTION *
+ ****/
+.cta_container {
+    padding: 0 90px;
+}
+
+.cta_image img {
+    width: 100%;
+    max-width: 574px;
+    object-fit: contain;
+}
+
+.cta_inner {
+    width: 100%;
+    max-width: 400px;
+}
+
+.cta_inner h2 {
+    color: var(--primary-text-color);
+    text-align: left;
+    font: normal normal bold 32px/48px Open Sans;
+}
+
+.cta_inner p {
+    color: var(--secondary-text-color);
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 14px;
+    font: normal normal normal 14px/36px var(--secondary-font);
+}
+
+.cta_inner a {
+    background-color: var(--button-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    font: normal normal bold 16px/22px var(--secondary-font);
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+    margin-top: 23px;
+    padding: 24px 22px 24px 23px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 259px;
+}
+
+
+@media (max-width: 480px) {
+    
+    .cta_container,.cta_content{
+        padding: 0!important;
+    }
+
+    .cta_inner{
+        padding: 20px;
+    }
+}
+
+
+/****
+ * Modal Section *
+ ****/
+
+ .hide {
+     display: none;
+ }
+
+ .active {
+     display: flex;
+ }
+.modal_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+ .modal_content {
+     width: 100%;
+     max-width: 453px;
+ }
+ 
+ .modal_content h1 {
+    color: var(--primary-text-color);
+    font: normal normal bold 36px/24px var(--secondary-font);
+    margin-bottom: 25px;
+    
+ }
+
+ .modal_content p {
+    color: var(--secondary-text-color);
+    font: normal normal normal 14px/36px var(--secondary-font);
+    margin-bottom: 25px;
+ }
+
+ .modal_content a {
+    color: var(--primary-text-color);
+    font: normal normal 600 16px/22px Open Sans;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+ }
